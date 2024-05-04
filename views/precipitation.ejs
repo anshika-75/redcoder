@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Page Title</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.6/tailwind.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<style>
+    .input {
+        transition: box-shadow 0.3s, border-color 0.3s;
+      }
+    .input:focus {
+        box-shadow: 0 0 0 0.2rem rgba(88, 99, 248, 0.15);
+      }
+
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      
+      body {
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+      }
+      
+      .navbar {
+        font-size: 18px;
+        background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        padding-bottom: 10px;
+      }
+      
+      .main-nav {
+        list-style-type: none;
+        display: none;
+      }
+      
+      .nav-links,
+      .logo {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.7);
+      }
+      
+      .main-nav li {
+        text-align: center;
+        margin: 15px auto;
+      }
+      
+      .logo {
+        display: inline-block;
+        font-size: 22px;
+        margin-top: 10px;
+        margin-left: 20px;
+      }
+      
+      .navbar-toggle {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        cursor: pointer;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 24px;
+      }
+      
+      #chkToggle {
+        display: none;
+      }
+      
+      #chkToggle:checked + ul.main-nav {
+        display: block;
+      }
+      
+      @media screen and (min-width: 768px) {
+        .navbar {
+          display: flex;
+          justify-content: space-between;
+          padding-bottom: 0;
+          height: 70px;
+          align-items: center;
+        }
+      
+        #chkToggle:checked + ul.main-nav {
+          display: flex;
+        }
+      
+        .main-nav {
+          display: flex;
+          margin-right: 30px;
+          flex-direction: row;
+          justify-content: flex-end;
+        }
+      
+        .main-nav li {
+          margin: 0;
+        }
+      
+        .nav-links {
+          margin-left: 40px;
+        }
+      
+        .logo {
+          margin-top: 0;
+        }
+      
+        .navbar-toggle {
+          display: none;
+        }
+      
+        .logo:hover,
+        .nav-links:hover {
+          color: rgba(255, 255, 255, 1);
+        }
+      }
+      button {
+        padding:10px;
+        background-color:#6a67ce;
+        color: #FFFFFF;
+        border: 0px;
+        cursor:pointer;
+        border-radius: 5px;
+    }
+    #output {
+        background-color:#F9F9F9;
+        padding:10px;
+        width: 100%;
+        margin-top:20px;
+        line-height:30px;
+    }
+    .hide {
+        display:none;
+    }
+    .show {
+        display:block;
+    }
+      
+</style>
+<body>
+
+  <nav class="navbar">
+    <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
+            <i class="fa fa-bars"></i>
+        </label>
+    <a href="#" class="logo">Dr decodeit</a>
+    <input type="checkbox" id="chkToggle"></input>
+    <ul class="main-nav" id="js-menu">
+      <li>
+        <a href="doclogin" class="nav-links">Dashboard</a>
+      </li>
+      <li>
+        <a href="doclogin" class="nav-links">Log Out</a>
+      </li>
+    </ul>
+  </nav>
+
+  <h1 style="transform: translate(11px, 76px);"><strong style="padding-left: 494px;font-size: 55px;">Prescription Pad</strong></h1>
+    <div class="contact-1 py-4 md:py-12" style="    padding-top: 7rem;
+    padding-bottom: 3rem;
+    padding-left: 17em;">
+        <div class="container mx-auto px-4">
+          <div class="xl:flex -mx-4"  style="width: 103%;">
+            <div class="xl:w-10/12 xl:mx-auto px-4" style="width: 100%;">
+              <div class="md:flex md:-mx-4 mt-4 md:mt-10">
+      
+                <div class="md:w-2/3 md:px-4" style="width: 77%;">
+                  <div class="contact-form">
+
+                      <form action="/precipitation" method="POST">
+
+                    <div class="sm:flex sm:flex-wrap -mx-3">
+                    
+                      <!-- Prescription Form 1 -->
+                      <div class="sm:w-full px-3 mb-3">
+                        <input type="text" name="fname1" placeholder="Full Name" class="border-2 rounded px-3 py-1 w-full focus:border-indigo-400 input">
+                      </div>
+                      <!-- Add more input fields for Prescription Form 1 -->
+
+                      <!-- Prescription Form 2 -->
+                      <div class="sm:w-full px-3 mb-3">
+                        <input type="text" name="fname2" placeholder="Full Name" class="border-2 rounded px-3 py-1 w-full focus:border-indigo-400 input">
+                      </div>
+                      <!-- Add more input fields for Prescription Form 2 -->
+
+                      <!-- Prescription Form 3 -->
+                      <div class="sm:w-full px-3 mb-3">
+                        <input type="text" name="fname3" placeholder="Full Name" class="border-2 rounded px-3 py-1 w-full focus:border-indigo-400 input">
+                      </div>
+                      <!-- Add more input fields for Prescription Form 3 -->
+                      
+                      <div class="text-right mt-4 md:mt-12">
+                        <button class="border-2 border-indigo-600 rounded px-6 py-2 text-indigo-600 hover:bg-indigo-600 hover:text-white transition-colors duration-300">
+                            Submit
+                            <i class="fas fa-chevron-right ml-2 text-sm"></i>
+                        </button>
+                      </div>
+                   
+                  </div>
+                   </form>   
+                </div>
+      
+              </
